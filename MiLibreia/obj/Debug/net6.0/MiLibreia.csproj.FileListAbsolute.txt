@@ -1,0 +1,12 @@
+D:\Csharp\SistemaFacturacion\MiLibreia\bin\Debug\net6.0\MiLibreia.deps.json
+D:\Csharp\SistemaFacturacion\MiLibreia\bin\Debug\net6.0\MiLibreia.dll
+D:\Csharp\SistemaFacturacion\MiLibreia\bin\Debug\net6.0\MiLibreia.pdb
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\MiLibreia.csproj.AssemblyReference.cache
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\MiLibreia.GeneratedMSBuildEditorConfig.editorconfig
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\MiLibreia.AssemblyInfoInputs.cache
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\MiLibreia.AssemblyInfo.cs
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\MiLibreia.csproj.CoreCompileInputs.cache
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\MiLibreia.dll
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\refint\MiLibreia.dll
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\MiLibreia.pdb
+D:\Csharp\SistemaFacturacion\MiLibreia\obj\Debug\net6.0\ref\MiLibreia.dll

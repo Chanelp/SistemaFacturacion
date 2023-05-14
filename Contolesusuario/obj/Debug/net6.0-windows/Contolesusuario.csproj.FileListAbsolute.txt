@@ -1,0 +1,15 @@
+D:\Csharp\SistemaFacturacion\Contolesusuario\bin\Debug\net6.0-windows\Contolesusuario.deps.json
+D:\Csharp\SistemaFacturacion\Contolesusuario\bin\Debug\net6.0-windows\Contolesusuario.dll
+D:\Csharp\SistemaFacturacion\Contolesusuario\bin\Debug\net6.0-windows\Contolesusuario.pdb
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.csproj.AssemblyReference.cache
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.ErrorTxtBox.resources
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.UserControl1.resources
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.csproj.GenerateResource.cache
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.GeneratedMSBuildEditorConfig.editorconfig
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.AssemblyInfoInputs.cache
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.AssemblyInfo.cs
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.csproj.CoreCompileInputs.cache
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.dll
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\refint\Contolesusuario.dll
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\Contolesusuario.pdb
+D:\Csharp\SistemaFacturacion\Contolesusuario\obj\Debug\net6.0-windows\ref\Contolesusuario.dll
