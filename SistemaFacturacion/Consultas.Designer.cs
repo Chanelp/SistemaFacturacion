@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
+            btnSeleccionar = new Button();
             button2 = new Button();
             button3 = new Button();
             textBox1 = new TextBox();
@@ -51,15 +51,15 @@
             label1.TabIndex = 1;
             label1.Text = "Nombre:";
             // 
-            // button1
+            // btnSeleccionar
             // 
-            button1.Location = new Point(41, 392);
-            button1.Name = "button1";
-            button1.Size = new Size(144, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Seleccionar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnSeleccionar.Location = new Point(41, 392);
+            btnSeleccionar.Name = "btnSeleccionar";
+            btnSeleccionar.Size = new Size(144, 23);
+            btnSeleccionar.TabIndex = 2;
+            btnSeleccionar.Text = "Seleccionar";
+            btnSeleccionar.UseVisualStyleBackColor = true;
+            btnSeleccionar.Click += button1_Click;
             // 
             // button2
             // 
@@ -108,13 +108,13 @@
             Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnSeleccionar);
             Controls.Add(label1);
             Name = "Consultas";
             Text = "Consultas";
             Controls.SetChildIndex(btnSalir, 0);
             Controls.SetChildIndex(label1, 0);
-            Controls.SetChildIndex(button1, 0);
+            Controls.SetChildIndex(btnSeleccionar, 0);
             Controls.SetChildIndex(button2, 0);
             Controls.SetChildIndex(button3, 0);
             Controls.SetChildIndex(textBox1, 0);
@@ -127,7 +127,7 @@
         #endregion
 
         public Label label1;
-        public Button button1;
+        public Button btnSeleccionar;
         public Button button2;
         public Button button3;
         public TextBox textBox1;

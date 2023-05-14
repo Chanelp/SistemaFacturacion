@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnColocar = new Button();
             btnEliminar = new Button();
             btnClientes = new Button();
@@ -44,12 +45,17 @@
             label7 = new Label();
             label8 = new Label();
             dataGridView1 = new DataGridView();
+            ColCodigo = new DataGridViewTextBoxColumn();
+            ColDescripcion = new DataGridViewTextBoxColumn();
+            ColPrecio = new DataGridViewTextBoxColumn();
+            ColCantidad = new DataGridViewTextBoxColumn();
+            ColImporte = new DataGridViewTextBoxColumn();
             txtCodigoCli = new Contolesusuario.ErrorTxtBox();
             txtCliente = new Contolesusuario.ErrorTxtBox();
             lblAtiende = new Label();
             btnBuscar = new Button();
+            lblTT = new Label();
             lblTotal = new Label();
-            lblTotall = new Label();
             txtCodigoPro = new Contolesusuario.ErrorTxtBox();
             txtDescripcion = new Contolesusuario.ErrorTxtBox();
             txtPrecio = new Contolesusuario.ErrorTxtBox();
@@ -61,57 +67,62 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(685, 408);
+            btnSalir.Location = new Point(713, 408);
             btnSalir.Size = new Size(125, 25);
             // 
             // btnColocar
             // 
-            btnColocar.Location = new Point(685, 154);
+            btnColocar.Location = new Point(713, 154);
             btnColocar.Name = "btnColocar";
             btnColocar.Size = new Size(125, 23);
             btnColocar.TabIndex = 1;
             btnColocar.Text = "Colocar";
             btnColocar.UseVisualStyleBackColor = true;
+            btnColocar.Click += btnColocar_Click;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(685, 197);
+            btnEliminar.Location = new Point(713, 197);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(125, 23);
             btnEliminar.TabIndex = 2;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnClientes
             // 
-            btnClientes.Location = new Point(685, 240);
+            btnClientes.Location = new Point(713, 240);
             btnClientes.Name = "btnClientes";
             btnClientes.Size = new Size(125, 23);
             btnClientes.TabIndex = 3;
             btnClientes.Text = "Clientes";
             btnClientes.UseVisualStyleBackColor = true;
+            btnClientes.Click += btnClientes_Click;
             // 
             // btnProductos
             // 
-            btnProductos.Location = new Point(685, 280);
+            btnProductos.Location = new Point(713, 280);
             btnProductos.Name = "btnProductos";
             btnProductos.Size = new Size(125, 23);
             btnProductos.TabIndex = 4;
             btnProductos.Text = "Productos";
             btnProductos.UseVisualStyleBackColor = true;
+            btnProductos.Click += btnProductos_Click;
             // 
             // btnNuevo
             // 
-            btnNuevo.Location = new Point(685, 323);
+            btnNuevo.Location = new Point(713, 323);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(125, 23);
             btnNuevo.TabIndex = 5;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnFacturar
             // 
-            btnFacturar.Location = new Point(685, 365);
+            btnFacturar.Location = new Point(713, 365);
             btnFacturar.Name = "btnFacturar";
             btnFacturar.Size = new Size(125, 23);
             btnFacturar.TabIndex = 6;
@@ -122,7 +133,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(37, 34);
+            label1.Location = new Point(37, 30);
             label1.Name = "label1";
             label1.Size = new Size(90, 18);
             label1.TabIndex = 8;
@@ -132,7 +143,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(37, 71);
+            label2.Location = new Point(37, 67);
             label2.Name = "label2";
             label2.Size = new Size(67, 18);
             label2.TabIndex = 9;
@@ -142,7 +153,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(37, 107);
+            label3.Location = new Point(37, 103);
             label3.Name = "label3";
             label3.Size = new Size(65, 18);
             label3.TabIndex = 10;
@@ -153,7 +164,7 @@
             label4.BackColor = SystemColors.ActiveCaptionText;
             label4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(24, 193);
+            label4.Location = new Point(23, 170);
             label4.Name = "label4";
             label4.Size = new Size(122, 27);
             label4.TabIndex = 11;
@@ -165,7 +176,7 @@
             label5.BackColor = SystemColors.ActiveCaptionText;
             label5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(144, 193);
+            label5.Location = new Point(143, 170);
             label5.Name = "label5";
             label5.Size = new Size(192, 27);
             label5.TabIndex = 12;
@@ -177,7 +188,7 @@
             label6.BackColor = SystemColors.ActiveCaptionText;
             label6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(332, 193);
+            label6.Location = new Point(331, 170);
             label6.Name = "label6";
             label6.Size = new Size(133, 27);
             label6.TabIndex = 13;
@@ -189,7 +200,7 @@
             label7.BackColor = SystemColors.ActiveCaptionText;
             label7.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(461, 193);
+            label7.Location = new Point(460, 170);
             label7.Name = "label7";
             label7.Size = new Size(106, 27);
             label7.TabIndex = 14;
@@ -201,7 +212,7 @@
             label8.BackColor = SystemColors.ActiveCaptionText;
             label8.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(563, 193);
+            label8.Location = new Point(562, 170);
             label8.Name = "label8";
             label8.Size = new Size(100, 27);
             label8.TabIndex = 15;
@@ -210,16 +221,56 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(24, 193);
+            dataGridView1.ColumnHeadersVisible = false;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColCodigo, ColDescripcion, ColPrecio, ColCantidad, ColImporte });
+            dataGridView1.Location = new Point(23, 197);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(639, 243);
             dataGridView1.TabIndex = 16;
             // 
+            // ColCodigo
+            // 
+            ColCodigo.HeaderText = "Codigo";
+            ColCodigo.Name = "ColCodigo";
+            ColCodigo.Width = 110;
+            // 
+            // ColDescripcion
+            // 
+            ColDescripcion.HeaderText = "Descripcion";
+            ColDescripcion.Name = "ColDescripcion";
+            ColDescripcion.Width = 200;
+            // 
+            // ColPrecio
+            // 
+            ColPrecio.HeaderText = "Precio";
+            ColPrecio.Name = "ColPrecio";
+            ColPrecio.Width = 110;
+            // 
+            // ColCantidad
+            // 
+            ColCantidad.HeaderText = "Cantidad";
+            ColCantidad.Name = "ColCantidad";
+            ColCantidad.Width = 110;
+            // 
+            // ColImporte
+            // 
+            ColImporte.HeaderText = "Importe";
+            ColImporte.Name = "ColImporte";
+            ColImporte.Width = 110;
+            // 
             // txtCodigoCli
             // 
-            txtCodigoCli.Location = new Point(134, 66);
+            txtCodigoCli.Location = new Point(134, 62);
             txtCodigoCli.Name = "txtCodigoCli";
             txtCodigoCli.Size = new Size(112, 23);
             txtCodigoCli.SoloNumeros = false;
@@ -229,7 +280,7 @@
             // 
             // txtCliente
             // 
-            txtCliente.Location = new Point(134, 105);
+            txtCliente.Location = new Point(134, 101);
             txtCliente.Name = "txtCliente";
             txtCliente.Size = new Size(193, 23);
             txtCliente.SoloNumeros = false;
@@ -240,7 +291,7 @@
             // 
             lblAtiende.BackColor = SystemColors.ButtonHighlight;
             lblAtiende.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAtiende.Location = new Point(134, 30);
+            lblAtiende.Location = new Point(134, 26);
             lblAtiende.Name = "lblAtiende";
             lblAtiende.Size = new Size(155, 23);
             lblAtiende.TabIndex = 20;
@@ -248,7 +299,7 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(252, 66);
+            btnBuscar.Location = new Point(252, 62);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(75, 23);
             btnBuscar.TabIndex = 21;
@@ -256,27 +307,29 @@
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
             // 
+            // lblTT
+            // 
+            lblTT.AutoSize = true;
+            lblTT.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTT.Location = new Point(509, 451);
+            lblTT.Name = "lblTT";
+            lblTT.Size = new Size(47, 16);
+            lblTT.TabIndex = 22;
+            lblTT.Text = "Total:";
+            // 
             // lblTotal
             // 
-            lblTotal.AutoSize = true;
-            lblTotal.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTotal.Location = new Point(503, 449);
+            lblTotal.BackColor = SystemColors.GradientActiveCaption;
+            lblTotal.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTotal.Location = new Point(562, 447);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(47, 16);
-            lblTotal.TabIndex = 22;
-            lblTotal.Text = "Total:";
-            // 
-            // lblTotall
-            // 
-            lblTotall.BackColor = SystemColors.GradientActiveCaption;
-            lblTotall.Location = new Point(556, 445);
-            lblTotall.Name = "lblTotall";
-            lblTotall.Size = new Size(100, 23);
-            lblTotall.TabIndex = 23;
+            lblTotal.Size = new Size(100, 23);
+            lblTotal.TabIndex = 23;
+            lblTotal.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtCodigoPro
             // 
-            txtCodigoPro.Location = new Point(33, 164);
+            txtCodigoPro.Location = new Point(32, 141);
             txtCodigoPro.Name = "txtCodigoPro";
             txtCodigoPro.Size = new Size(100, 23);
             txtCodigoPro.SoloNumeros = false;
@@ -285,7 +338,7 @@
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(154, 164);
+            txtDescripcion.Location = new Point(153, 141);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new Size(173, 23);
             txtDescripcion.SoloNumeros = false;
@@ -294,7 +347,7 @@
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(347, 164);
+            txtPrecio.Location = new Point(346, 141);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(96, 23);
             txtPrecio.SoloNumeros = false;
@@ -303,7 +356,7 @@
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(461, 164);
+            txtCantidad.Location = new Point(460, 141);
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(100, 23);
             txtCantidad.SoloNumeros = false;
@@ -318,13 +371,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(878, 483);
+            ClientSize = new Size(878, 493);
             Controls.Add(txtCantidad);
             Controls.Add(txtPrecio);
             Controls.Add(txtDescripcion);
             Controls.Add(txtCodigoPro);
-            Controls.Add(lblTotall);
             Controls.Add(lblTotal);
+            Controls.Add(lblTT);
             Controls.Add(btnBuscar);
             Controls.Add(lblAtiende);
             Controls.Add(txtCliente);
@@ -367,8 +420,8 @@
             Controls.SetChildIndex(txtCliente, 0);
             Controls.SetChildIndex(lblAtiende, 0);
             Controls.SetChildIndex(btnBuscar, 0);
+            Controls.SetChildIndex(lblTT, 0);
             Controls.SetChildIndex(lblTotal, 0);
-            Controls.SetChildIndex(lblTotall, 0);
             Controls.SetChildIndex(txtCodigoPro, 0);
             Controls.SetChildIndex(txtDescripcion, 0);
             Controls.SetChildIndex(txtPrecio, 0);
@@ -400,12 +453,17 @@
         private Contolesusuario.ErrorTxtBox txtCliente;
         private Label lblAtiende;
         private Button btnBuscar;
+        private Label lblTT;
         private Label lblTotal;
-        private Label lblTotall;
         private Contolesusuario.ErrorTxtBox txtCodigoPro;
         private Contolesusuario.ErrorTxtBox txtDescripcion;
         private Contolesusuario.ErrorTxtBox txtPrecio;
         private Contolesusuario.ErrorTxtBox txtCantidad;
         private ErrorProvider errorProvider1;
+        private DataGridViewTextBoxColumn ColCodigo;
+        private DataGridViewTextBoxColumn ColDescripcion;
+        private DataGridViewTextBoxColumn ColPrecio;
+        private DataGridViewTextBoxColumn ColCantidad;
+        private DataGridViewTextBoxColumn ColImporte;
     }
 }
