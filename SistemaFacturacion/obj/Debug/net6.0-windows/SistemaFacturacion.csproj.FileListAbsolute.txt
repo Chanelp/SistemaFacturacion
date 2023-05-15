@@ -39,3 +39,4 @@ D:\Csharp\SistemaFacturacion\SistemaFacturacion\bin\Debug\net6.0-windows\Contole
 D:\Csharp\SistemaFacturacion\SistemaFacturacion\obj\Debug\net6.0-windows\SistemaFacturacion.ConsultarClientes.resources
 D:\Csharp\SistemaFacturacion\SistemaFacturacion\obj\Debug\net6.0-windows\SistemaFacturacion.ConsultarProductos.resources
 D:\Csharp\SistemaFacturacion\SistemaFacturacion\obj\Debug\net6.0-windows\SistemaFacturacion.Facturacion.resources
+D:\Csharp\SistemaFacturacion\SistemaFacturacion\obj\Debug\net6.0-windows\SistemaFacturacion.Reporte.resources

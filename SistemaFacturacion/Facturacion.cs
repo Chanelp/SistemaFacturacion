@@ -190,5 +190,10 @@ namespace SistemaFacturacion
 
             txtCodigoCli.Focus();
         }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

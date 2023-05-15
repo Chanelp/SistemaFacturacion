@@ -128,6 +128,7 @@
             btnFacturar.TabIndex = 6;
             btnFacturar.Text = "Facturar";
             btnFacturar.UseVisualStyleBackColor = true;
+            btnFacturar.Click += btnFacturar_Click;
             // 
             // label1
             // 
